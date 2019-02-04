@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		AD3828FB2201BF3C00B5C223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3828FA2201BF3C00B5C223 /* AppDelegate.swift */; };
-		AD3828FD2201BF3C00B5C223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3828FC2201BF3C00B5C223 /* ViewController.swift */; };
+		AD3828FD2201BF3C00B5C223 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3828FC2201BF3C00B5C223 /* HomeController.swift */; };
 		AD3829002201BF3C00B5C223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3828FE2201BF3C00B5C223 /* Main.storyboard */; };
 		AD3829022201BF3E00B5C223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3829012201BF3E00B5C223 /* Assets.xcassets */; };
 		AD3829052201BF3E00B5C223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3829032201BF3E00B5C223 /* LaunchScreen.storyboard */; };
+		AD38290D22078A5900B5C223 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38290C22078A5900B5C223 /* VideoCell.swift */; };
+		AD38291122078AE800B5C223 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38291022078AE800B5C223 /* UIViewExtension.swift */; };
+		AD3829162207AB1600B5C223 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3829152207AB1600B5C223 /* MenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD3828F72201BF3C00B5C223 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3828FA2201BF3C00B5C223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD3828FC2201BF3C00B5C223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD3828FC2201BF3C00B5C223 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		AD3828FF2201BF3C00B5C223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD3829012201BF3E00B5C223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD3829042201BF3E00B5C223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD3829062201BF3E00B5C223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD38290C22078A5900B5C223 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		AD38291022078AE800B5C223 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		AD3829152207AB1600B5C223 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		AD3828F92201BF3C00B5C223 /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
-				AD3828FA2201BF3C00B5C223 /* AppDelegate.swift */,
-				AD3828FC2201BF3C00B5C223 /* ViewController.swift */,
-				AD3828FE2201BF3C00B5C223 /* Main.storyboard */,
-				AD3829012201BF3E00B5C223 /* Assets.xcassets */,
-				AD3829032201BF3E00B5C223 /* LaunchScreen.storyboard */,
-				AD3829062201BF3E00B5C223 /* Info.plist */,
+				AD38291422079B6300B5C223 /* Controller */,
+				AD38291322079B1D00B5C223 /* View */,
+				AD38290F22078AA500B5C223 /* SupportFiles */,
+				AD38291222079AF500B5C223 /* Extensions */,
+				AD38290E22078A9900B5C223 /* StoryBoards */,
 			);
 			path = YouTube;
+			sourceTree = "<group>";
+		};
+		AD38290E22078A9900B5C223 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				AD3828FE2201BF3C00B5C223 /* Main.storyboard */,
+				AD3829032201BF3E00B5C223 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		AD38290F22078AA500B5C223 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AD3828FA2201BF3C00B5C223 /* AppDelegate.swift */,
+				AD3829012201BF3E00B5C223 /* Assets.xcassets */,
+				AD3829062201BF3E00B5C223 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		AD38291222079AF500B5C223 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD38291022078AE800B5C223 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD38291322079B1D00B5C223 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD38290C22078A5900B5C223 /* VideoCell.swift */,
+				AD3829152207AB1600B5C223 /* MenuBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD38291422079B6300B5C223 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD3828FC2201BF3C00B5C223 /* HomeController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD3828FD2201BF3C00B5C223 /* ViewController.swift in Sources */,
+				AD3828FD2201BF3C00B5C223 /* HomeController.swift in Sources */,
 				AD3828FB2201BF3C00B5C223 /* AppDelegate.swift in Sources */,
+				AD38291122078AE800B5C223 /* UIViewExtension.swift in Sources */,
+				AD38290D22078A5900B5C223 /* VideoCell.swift in Sources */,
+				AD3829162207AB1600B5C223 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N768D33P28;
-				INFOPLIST_FILE = YouTube/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YouTube/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N768D33P28;
-				INFOPLIST_FILE = YouTube/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YouTube/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

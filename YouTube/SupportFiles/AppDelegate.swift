@@ -16,6 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let ctr = HomeController(collectionViewLayout: layout)
+        window?.rootViewController = UINavigationController(rootViewController: ctr)
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 230/255, green: 32/255, blue: 31/255, alpha: 1)
+        // get rid of black bar underneath
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
+        
+        let statusView = UIView()
+        statusView.backgroundColor = UIColor(red: 194/255, green: 31/255, blue: 31/255, alpha: 1)
+        window?.addSubview(statusView)
+        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        window?.addConstraints(withVisualFormat: "H:|[v0]|", views: statusView)
+        window?.addConstraints(withVisualFormat: "V:|[v0(\(statusBarHeight))]|", views: statusView)
+        
         return true
     }
 
